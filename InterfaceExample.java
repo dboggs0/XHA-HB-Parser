@@ -1,3 +1,5 @@
+//interface examples 
+
 import java.util.ArrayList;
 
 public class InterfaceScratch{
