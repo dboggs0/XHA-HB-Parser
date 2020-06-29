@@ -1,0 +1,30 @@
+'''
+separates sent packets from received packets and puts each in a "sent" or "recieved" file
+'''
+name = "fbp-vdi-p042 - Edited"
+filename= name + ".txt"
+fd = open(filename)
+
+sentFile = name + ' - sent.txt'
+sf = open(sentFile, 'w').close()
+sf = open(sentFile, 'a')
+
+receivedFile = name + ' - received.txt'
+rf = open(receivedFile, 'w').close()
+rf = open(receivedFile, 'a')
+
+for line in fd:
+        if (line.find('IP fbp-vdi-p042.ksnet.com.ha-cluster > ') > -1):
+                sf.write(line)
+        else:
+                rf.write(line)
+
+
+sf.close()
+rf.close()
+fd.close()
+
+
+
+
+
