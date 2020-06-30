@@ -1,3 +1,6 @@
+"""
+Writes the absolute path (in python-readable form) of files in a specified directory to the specified output file
+"""
 import os, sys
 binName = 'listFiles'
 
